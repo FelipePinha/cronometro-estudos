@@ -1,0 +1,44 @@
+@import './theme';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manjari', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $black;
+}
+
+.container {
+    max-width: 124rem;
+    margin: 0 auto;
+    display: grid;
+    @media (min-width: 1208px) {
+        grid-template-columns: 60% 40%;
+        grid-template-areas:
+            'new-task task'
+            'stopwatch task'
+            '.  task';
+        column-gap: 6rem;
+    }
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'new-task'
+        'stopwatch'
+        'task';
+
+    row-gap: 3rem;
+    padding: 5rem 2rem;
+}
+
+::placeholder {
+    color: $white;
+    opacity: 0.9;
+}
