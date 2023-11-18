@@ -31,9 +31,11 @@ export const NewTask = ({ setTasks, tasks }: NewTaskProps) => {
             title,
             time,
             id: allTasks.length + 1,
-            completed: false,
         });
         setTasks(allTasks);
+
+        setTitle('');
+        setTime('00:00:00');
     };
 
     return (
