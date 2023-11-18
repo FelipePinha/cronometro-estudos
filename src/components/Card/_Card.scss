@@ -1,0 +1,32 @@
+@import '../../styles/theme';
+
+.card {
+    margin-top: 2rem;
+    background-color: $grey;
+    color: $white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.9);
+    cursor: pointer;
+
+    @media (min-width: 1208px) {
+        max-width: 60%;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+
+        @media (min-width: 1208px) {
+            font-size: 2rem;
+        }
+    }
+
+    span {
+        font-size: 1.5rem;
+
+        @media (min-width: 1208px) {
+            font-size: 2rem;
+        }
+    }
+}
