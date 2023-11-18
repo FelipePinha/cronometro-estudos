@@ -1,0 +1,56 @@
+@import '../../styles/theme';
+@import '../../styles/mixin';
+
+.new-task {
+    grid-area: new-task;
+    max-width: 100%;
+    height: 25rem;
+    background-color: $blue;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0.2rem 0.4rem 0.4rem rgba($color: #000000, $alpha: 0.9);
+
+    @media (min-width: 1208px) {
+        height: 18rem;
+    }
+}
+
+.form-inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @media (min-width: 1208px) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-control {
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+        width: 100%;
+
+        label {
+            font-size: 2.2rem;
+            color: $white;
+        }
+
+        input {
+            padding: 2rem;
+            height: 1rem;
+            border-radius: 0.6rem;
+            border: none;
+            background-color: $dark-blue;
+            color: $white;
+            font-size: 2.2rem;
+        }
+    }
+}
+
+button[type='submit'] {
+    @include button-styles;
+}
